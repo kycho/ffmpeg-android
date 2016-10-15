@@ -22,25 +22,23 @@ make clean
 --cpu="$CPU" \
 --enable-runtime-cpudetect \
 --sysroot="$NDK_SYSROOT" \
---enable-pic \
---enable-libx264 \
---enable-libass \
---enable-libfreetype \
---enable-libfribidi \
---enable-libmp3lame \
---enable-fontconfig \
---enable-pthreads \
+--disable-shared \
 --disable-debug \
---disable-ffserver \
---enable-version3 \
---enable-hardcoded-tables \
+--enable-static \
+--disable-doc \
+--enable-small \
+--enable-ffmpeg \
 --disable-ffplay \
 --disable-ffprobe \
---enable-gpl \
---enable-yasm \
+--disable-ffserver \
 --disable-doc \
---disable-shared \
---enable-static \
+--enable-gpl \
+--enable-postproc \
+--enable-pic \
+--enable-version3  --enable-yasm --enable-decoders --enable-encoders --enable-muxers \
+--enable-demuxers --enable-parsers --enable-protocols --enable-filters --enable-avresample \
+--disable-libfreetype --disable-indevs --enable-indev=lavfi --disable-outdevs \
+--enable-hwaccels --disable-network --enable-libx264 --enable-zlib \
 --pkg-config="${2}/ffmpeg-pkg-config" \
 --prefix="${2}/build/${1}" \
 --extra-cflags="-I${TOOLCHAIN_PREFIX}/include $CFLAGS" \
