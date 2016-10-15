@@ -14,7 +14,7 @@ case $1 in
     NDK_ABI='arm'
     NDK_TOOLCHAIN_ABI='arm-linux-androideabi'
     NDK_CROSS_PREFIX="${NDK_TOOLCHAIN_ABI}"
-    CFLAGS="${CFLAGS} -mfpu=neon"
+    CFLAGS="${CFLAGS} -mfloat-abi=softfp -mfpu=neon -fPIE -pie -Os -fpic"
   ;;
   x86)
     NDK_ABI='x86'
